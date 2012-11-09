@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script src="http://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
+</head>
+<body>
+  <div id="counter"></div>
+  <button>+1</button>
+
+  <script type="application/dart">
+    import "dart:html";
+
+    var counter = 0;
+    updateCounter() {
+      query("#counter").text = "$counter";
+    }
+
+    main() {
+      query("button").on.click.add((e) {
+        counter++;
+        updateCounter();
+      });
+
+      updateCounter();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+  <element name="x-counter" constructor="Counter" extends="div">
+    <template>
+      <div>{{counter}}</div>
+      <button data-action="click:increment">+1</button>
+    </template>
+
+    <script type="application/dart">
+      import "package:web_components/web_component.dart";
+
+      class Counter extends WebComponent {
+        var counter = 0;
+
+        increment(event) {
+          counter++;
+        }
+      }
+    </script>
+  </element>
+
+  <x-counter></x-counter>
+
+  <script type="application/dart">
+    main() {}
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+download/
+packages/
+pubspec.lock
+_index.*
+_counter.*

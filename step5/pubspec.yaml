@@ -1,0 +1,4 @@
+name: codelab_step5
+dependencies:
+  web_components:
+
